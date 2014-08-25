@@ -1,0 +1,35 @@
+{
+	"auto_complete": true,
+	"auto_complete_commit_on_tab": true,
+	"auto_complete_selector": "source, text",
+	"color_scheme": "Packages/Colorsublime-Themes/WebExPert2.tmTheme",
+	"detect_indentation": true,
+	"ensure_newline_at_eof_on_save": true,
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		"__pycache__"
+	],
+	"font_face": "Ubuntu Mono",
+	"font_size": 12,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"indent_to_bracket": true,
+	"line_padding_bottom": 1,
+	"line_padding_top": 1,
+	"rulers":
+	[
+		79,
+		120
+	],
+	"shift_tab_unindent": true,
+	"tab_completion": true,
+	"tab_size": 2,
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true
+}

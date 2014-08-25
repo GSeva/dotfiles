@@ -1,0 +1,19 @@
+{
+  "suppress_word_completions": false,
+  "anaconda_linting": true,
+  "anaconda_gutter_marks": false,
+  "anaconda_gutter_theme": "dark",
+  "anaconda_linter_mark_style": "none",
+  "pyflakes_explicit_ignore":
+  [
+      // "Redefined",
+      // "UnusedImport",
+      // "UndefinedName",
+      // "UndefinedLocal",
+      // "UnusedVariable,",
+      // "UndefinedExport",
+      // "DuplicateArgument",
+      // "RedefinedWhileUnused"
+  ],
+  "complete_parameters": true
+}

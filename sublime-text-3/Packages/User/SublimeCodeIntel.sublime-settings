@@ -1,0 +1,16 @@
+{
+  "codeintel_live_enabled_languages":
+    [
+        "JavaScript", "HTML", "HTML5", "Twig"
+    ],
+  "codeintel_config": {
+        "Python": {
+            "env": {
+                /*
+                "PATH": "/usr/local/bin:/usr/local/sbin:$PATH",
+                "PYTHONPATH": "/usr/local/lib/python2.7/site-packages:/usr/local/lib/python:$PYTHONPATH"
+                */
+            }
+        }
+    }
+}
