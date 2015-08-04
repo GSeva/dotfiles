@@ -1,7 +1,9 @@
 {
+	"always_show_minimap_viewport": true,
 	"auto_complete": true,
 	"auto_complete_commit_on_tab": true,
 	"auto_complete_selector": "source, text",
+	"bold_folder_labels": true,
 	"color_scheme": "Packages/Colorsublime-Themes/WebExPert2.tmTheme",
 	"detect_indentation": true,
 	"ensure_newline_at_eof_on_save": true,
@@ -14,6 +16,10 @@
 		"__pycache__"
 	],
 	"font_face": "Ubuntu Mono",
+	"font_options":
+	[
+		"gray_antialias"
+	],
 	"font_size": 12,
 	"ignored_packages":
 	[
@@ -22,6 +28,9 @@
 	"indent_to_bracket": true,
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,
+	"material_theme_disable_fileicons": false,
+	"material_theme_small_statusbar": true,
+	"material_theme_small_tab": true,
 	"rulers":
 	[
 		79,
@@ -30,6 +39,7 @@
 	"shift_tab_unindent": true,
 	"tab_completion": true,
 	"tab_size": 2,
+	"theme": "Material-Theme.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true
 }

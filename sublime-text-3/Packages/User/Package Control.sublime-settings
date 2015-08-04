@@ -1,15 +1,27 @@
 {
+	"in_process_packages":
+	[
+	],
 	"installed_packages":
 	[
+		"AAAPackageDev",
 		"Anaconda",
 		"Better Completion",
 		"BracketHighlighter",
+		"Color Highlighter",
 		"ColorPicker",
 		"Djaneiro",
 		"DocBlockr",
 		"Emmet Css Snippets",
+		"Gulp",
+		"Jasmine JS",
 		"jQuery",
+		"LaTeXTools",
+		"LESS",
+		"Material Theme",
+		"Package Control",
 		"PackageResourceViewer",
+		"Sass",
 		"SideBarEnhancements",
 		"Tag"
 	]

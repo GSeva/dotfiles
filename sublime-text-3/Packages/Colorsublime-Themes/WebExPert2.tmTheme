@@ -4,6 +4,7 @@
 <!-- ============================================ -->
 <!-- app:  http://tmtheme-editor.herokuapp.com    -->
 <!-- code: https://github.com/aziz/tmTheme-Editor -->
+<!-- http://paletton.com/#uid=53s0u0kaPb77Wnna3i6hQa9n886 -->
 <plist version="1.0">
 <dict>
 	<key>comment</key>
@@ -15,18 +16,26 @@
 		<dict>
 			<key>settings</key>
 			<dict>
-				<key>background</key>
-				<string>#2D2D2D</string>
-				<key>caret</key>
-				<string>#CCCCCC</string>
-				<key>foreground</key>
-				<string>#ffffff</string>
-				<key>invisibles</key>
-				<string>#6A6A6A</string>
-				<key>lineHighlight</key>
-				<string>#393939</string>
-				<key>selection</key>
-				<string>#515151</string>
+        <key>background</key>
+        <string>#263238</string>
+        <key>caret</key>
+        <string>#c0c5ce</string>
+        <key>foreground</key>
+        <string>#CDD3DE</string>
+        <key>invisibles</key>
+        <string>#65737e</string>
+        <key>lineHighlight</key>
+        <string>#80CBC41A</string>
+        <key>selection</key>
+        <string>#80CBC433</string>
+        <key>guide</key>
+        <string>#37474F80</string>
+        <key>activeGuide</key>
+        <string>#80CBC450</string>
+        <key>gutterForeground</key>
+        <string>#37474F</string>
+        <key>findHighlight</key>
+        <string>#F8E71C</string>
 			</dict>
 		</dict>
 		<dict>
@@ -94,7 +103,7 @@
 				<key>foreground</key>
 				<string>#347AD9</string>
 				<key>background</key>
-				<string>#2D2D2D</string>
+				<string>#254454</string>
 			</dict>
 		</dict>
 		<!-- /Python -->
@@ -493,7 +502,7 @@
 			<key>name</key>
 			<string>String, Symbols, Inherited Class, Markup Heading</string>
 			<key>scope</key>
-			<string>string, constant.other.symbol, entity.other.inherited-class, markup.heading</string>
+			<string>string, string.quoted.single, constant.other.symbol, entity.other.inherited-class, markup.heading</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -501,7 +510,7 @@
 				<key>foreground</key>
 				<string>#00b700</string>
 				<key>background</key>
-				<string>#2a3228</string>
+				<string>#2A3F33</string>
 			</dict>
 		</dict>
 		<dict>
@@ -754,7 +763,7 @@
 				<key>foreground</key>
 				<string>#00b700</string>
 				<key>background</key>
-				<string>#2a3228</string>
+				<string>#2A3F33</string>
 			</dict>
 		</dict>
 		<dict>
