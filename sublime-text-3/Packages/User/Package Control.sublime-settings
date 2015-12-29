@@ -1,4 +1,5 @@
 {
+	"bootstrapped": true,
 	"in_process_packages":
 	[
 	],
@@ -6,8 +7,11 @@
 	[
 		"AAAPackageDev",
 		"Anaconda",
+		"Apache Pig",
 		"Better Completion",
 		"BracketHighlighter",
+		"C Improved",
+		"C++ Starting Kit",
 		"Color Highlighter",
 		"ColorPicker",
 		"Djaneiro",
@@ -18,9 +22,11 @@
 		"jQuery",
 		"LaTeXTools",
 		"LESS",
+		"Markdown Preview",
 		"Material Theme",
 		"Package Control",
 		"PackageResourceViewer",
+		"Protocol Buffer Syntax",
 		"Sass",
 		"SideBarEnhancements",
 		"Tag"

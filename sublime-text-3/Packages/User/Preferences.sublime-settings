@@ -31,6 +31,7 @@
 	"material_theme_disable_fileicons": false,
 	"material_theme_small_statusbar": true,
 	"material_theme_small_tab": true,
+	"material_theme_tabs_autowidth": true,
 	"rulers":
 	[
 		79,
