@@ -1,12 +1,44 @@
 {
+	"_prev_color_scheme": "Packages/Colorsublime-Themes/WebExPert2.tmTheme",
+	"added_words":
+	[
+		"cuantificable",
+		"incremental",
+		"Correctitud",
+		"computacionales",
+		"Mantenibilidad",
+		"Reusabilidad",
+		"Portabilidad",
+		"testing",
+		"feedback",
+		"parametrización",
+		"prototipado",
+		"interdisciplinaria",
+		"sincronización",
+		"secuencialmente",
+		"features",
+		"priorización",
+		"unarias",
+		"conceptualmente",
+		"recursivamente",
+		"realimentación",
+		"determinística",
+		"probabilística",
+		"empatía",
+		"globalmente",
+		"finalización"
+	],
 	"always_show_minimap_viewport": true,
 	"auto_complete": true,
 	"auto_complete_commit_on_tab": true,
 	"auto_complete_selector": "source, text",
 	"bold_folder_labels": true,
-	"color_scheme": "Packages/Colorsublime-Themes/WebExPert2.tmTheme",
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
 	"detect_indentation": true,
+	"dictionary": "Packages/Spanish.dic",
+	"enable_signatures_tooltip": false,
 	"ensure_newline_at_eof_on_save": true,
+	"find_selected_text": true,
 	"folder_exclude_patterns":
 	[
 		".svn",
@@ -15,12 +47,13 @@
 		"CVS",
 		"__pycache__"
 	],
-	"font_face": "Ubuntu Mono",
+	"font_face": "Anonymous Pro",
 	"font_options":
 	[
-		"gray_antialias"
+		"gray_antialias",
+		"subpixel_antialias"
 	],
-	"font_size": 12,
+	"font_size": 17,
 	"ignored_packages":
 	[
 		"Vintage"
@@ -28,16 +61,22 @@
 	"indent_to_bracket": true,
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,
+	"material_theme_accent_lime": true,
+	"material_theme_appbar_charcoal": true,
+	"material_theme_compact_panel": true,
+	"material_theme_compact_sidebar": true,
 	"material_theme_disable_fileicons": false,
 	"material_theme_small_statusbar": true,
 	"material_theme_small_tab": true,
 	"material_theme_tabs_autowidth": true,
+	"material_theme_tree_headings": true,
 	"rulers":
 	[
 		79,
 		120
 	],
 	"shift_tab_unindent": true,
+	"skin": "DA UI/Minimal",
 	"tab_completion": true,
 	"tab_size": 2,
 	"theme": "Material-Theme.sublime-theme",

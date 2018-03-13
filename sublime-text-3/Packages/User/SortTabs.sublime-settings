@@ -1,0 +1,9 @@
+{
+  "tab_context_sort_menu": [
+    // {"caption": "File Path", "command": "sort_tabs_by_file_path"},
+    {"caption": "Type", "command": "sort_tabs_by_type"},
+    {"caption": "Name", "command": "sort_tabs_by_name"}
+    // {"caption": "Date", "command": "sort_tabs_by_date"},
+    // {"caption": "Last Activation", "command": "sort_tabs_by_last_activation"}
+  ]
+}
