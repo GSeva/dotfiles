@@ -50,7 +50,7 @@ alias zshrc="nano ~/.zshrc && reload" # Uncomment the following line to change h
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(z brew docker pip git)
+plugins=(brew docker pip git zsh-autosuggestions)
 
 # User configuration
 
@@ -60,7 +60,7 @@ export PATH="/usr/local/opt/python@2/libexec/bin:/usr/local/opt/python@2/bin:$PA
 
 source $ZSH/oh-my-zsh.sh
 
-# You may need to manually set your language environmentexport 
+# You may need to manually set your language environmentexport
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
@@ -90,12 +90,15 @@ zstyle ':completion::complete:*' use-cache 1
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
+
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" --no-use # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-alias node='unalias node ; unalias npm ; nvm use default ; node $@'
-alias npm='unalias node ; unalias npm ; nvm use default ; npm $@'
-alias sshpresto='ssh -i ~/.ssh/trocafone_data_science_key.pem -o "StrictHostKeyChecking no" -o "UserKnownHostsFile /dev/null" hadoop@emr.trocafone.net'
+export PATH=/Users/gseva/.nvm/versions/node/v8.9.1/bin:$PATH
+
+# Hack i used to speed up shell startup
+# alias node='unalias node ; unalias npm ; nvm use default ; node $@'
+# alias npm='unalias node ; unalias npm ; nvm use default ; npm $@'
 
 alias jn='jupyter notebook'
 
@@ -114,8 +117,8 @@ fi
 
 unset -f work_in_progress
 
-#__git_files () { 
-#    _wanted files expl 'local files' _files     
+#__git_files () {
+#    _wanted files expl 'local files' _files
 #}
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
@@ -125,3 +128,25 @@ unset -f work_in_progress
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /Users/gseva/.nvm/versions/node/v8.9.1/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/gseva/.nvm/versions/node/v8.9.1/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+export HISTTIMEFORMAT="%d/%m/%y %T "
+
+alias docker_rma='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
+alias docker_log='docker logs -f --tail 100'
+alias docker_rmi_dangling='docker rmi $(docker images -f "dangling=true" -q)'
+
+#if [[ -f "$(brew --prefix)/opt/mcfly/mcfly.bash" ]]; then
+#  source "$(brew --prefix)/opt/mcfly/mcfly.bash"
+#fi
+
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /Users/gseva/.nvm/versions/node/v8.9.1/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/gseva/.nvm/versions/node/v8.9.1/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
+
+eval "$(lua /Users/gseva/.oh-my-zsh/plugins/z.lua/z.lua --init zsh)"
+
+alias gs.='git status .'
+alias ls='exa'
+
+
+# Coreutils
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
