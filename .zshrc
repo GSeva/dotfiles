@@ -50,7 +50,7 @@ alias zshrc="nano ~/.zshrc && reload" # Uncomment the following line to change h
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(brew docker pip git zsh-autosuggestions)
+plugins=(brew docker pip git zsh-autosuggestions command-time)
 
 # User configuration
 
@@ -104,8 +104,15 @@ alias jn='jupyter notebook'
 
 source ~/.iterm2_shell_integration.`basename $SHELL`
 
-export WORKON_HOME=/Users/gseva/virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
+export PATH="/usr/local/opt/python@3.10/bin:/Users/gseva/Library/Python/3.10/bin/:$PATH"
+
+# Virtualenvwrapper is deprecated, i now use venv and a custom script
+#export WORKON_HOME=/Users/gseva/virtualenvs
+#export VIRTUALENVWRAPPER_PYTHON=$(which python3)
+#export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
+#source /usr/local/bin/virtualenvwrapper.sh
+
+source ~/.local/venv_wrapper.sh
 
 # Stash your environment variables in ~/.localrc. This means they'll stay out
 # of your main dotfiles repository (which may be public, like this one), but
@@ -150,3 +157,58 @@ alias ls='exa'
 
 # Coreutils
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+
+alias note="z note && workon py3-insights && jn"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/gseva/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/gseva/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/gseva/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/gseva/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+alias agnb="ag -G '\.ipynb$'"
+#if command -v pyenv 1>/dev/null 2>&1; then
+#  eval "$(pyenv init -)"
+#fi
+
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+### Fix slowness of pastes with zsh-syntax-highlighting.zsh
+pasteinit() {
+  OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
+  zle -N self-insert url-quote-magic # I wonder if you'd need `.url-quote-magic`?
+}
+
+pastefinish() {
+  zle -N self-insert $OLD_SELF_INSERT
+}
+zstyle :bracketed-paste-magic paste-init pasteinit
+zstyle :bracketed-paste-magic paste-finish pastefinish
+### Fix slowness of pastes
+
+### This must be the last thing to source
+
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+
+source /Users/gseva/.config/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# If command execution time above min. time, plugins will not output time.
+ZSH_COMMAND_TIME_MIN_SECONDS=3
+
+# Message to display (set to "" for disable).
+#ZSH_COMMAND_TIME_MSG="Execution time: %s sec"
+ZSH_COMMAND_TIME_MSG=""
+
+# Message color.
+ZSH_COMMAND_TIME_COLOR="cyan"
