@@ -164,14 +164,14 @@ alias note="z note && workon py3-insights && jn"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/gseva/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/gseva/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/gseva/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/gseva/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/gseva/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/gseva/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/gseva/anaconda3/bin:$PATH"
+        export PATH="/Users/gseva/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -212,3 +212,12 @@ ZSH_COMMAND_TIME_MSG=""
 
 # Message color.
 ZSH_COMMAND_TIME_COLOR="cyan"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/terraform terraform
+
+alias tf='terraform'
+
+# added by Snowflake SnowSQL installer v1.2
+export PATH=/Applications/SnowSQL.app/Contents/MacOS:$PATH
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"
